@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-jtl385e99ts$xr6ld+0xrgk&cv#xt(oas^%k*+r7=eeyx$f1v8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sih.fliptechy.in']
 
 
 # Application definition
@@ -82,10 +82,15 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ecommerce',
+        'USER': 'ecommerce',
+        'PASSWORD': 'ecommerceecommerce',
+        'HOST': 'localhost',  # Or your MySQL host
+        'PORT': '3306',       # MySQL default port
     }
 }
+
 
 
 # Password validation
