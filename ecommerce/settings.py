@@ -81,12 +81,13 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': 'ecommerce',
         'USER': 'ecommerce',
         'PASSWORD': 'ecommerceecommerce',
         'HOST': 'localhost',  # Or your MySQL host
-        'PORT': '3306',       # MySQL default port
+        'PORT': '3306',  
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" ,"use_pure": True},     # MySQL default port
     }
 }
 
