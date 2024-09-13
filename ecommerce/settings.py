@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-jtl385e99ts$xr6ld+0xrgk&cv#xt(oas^%k*+r7=eeyx$f1v8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sih.fliptechy.in', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['sih.fliptechy.in','.vercel.app', 'localhost', '127.0.0.1']
 
 # Application definition
 
