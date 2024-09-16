@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-jtl385e99ts$xr6ld+0xrgk&cv#xt(oas^%k*+r7=eeyx$f1v8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['sih.fliptechy.in','.vercel.app', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -82,10 +81,16 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'ecommerce',
+        'USER': 'ecommerce',
+        'PASSWORD': 'ecommerceecommerce',
+        'HOST': 'localhost',  # Or your MySQL host
+        'PORT': '3306',  
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" ,"use_pure": True},     # MySQL default port
     }
 }
+
 
 
 # Password validation
@@ -135,6 +140,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 JAZZMIN_SETTINGS = {
     # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
