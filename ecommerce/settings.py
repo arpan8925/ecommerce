@@ -81,13 +81,8 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
-        'NAME': 'ecommerce',
-        'USER': 'ecommerce',
-        'PASSWORD': 'ecommerceecommerce',
-        'HOST': 'localhost',  # Or your MySQL host
-        'PORT': '3306',  
-        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" ,"use_pure": True},     # MySQL default port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # BASE_DIR is typically already defined in settings.py
     }
 }
 

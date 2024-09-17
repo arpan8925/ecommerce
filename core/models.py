@@ -33,5 +33,5 @@ class Vendor(models.Model):
     authentic_rating = models.CharField(max_length=100)
     days_return = models.CharField(max_length=100)
     warrenty_period = models.CharField(max_length=100)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     
