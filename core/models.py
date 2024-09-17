@@ -1,4 +1,7 @@
 from django.db import models
+
+# Create your models here.
+from django.db import models
 from shortuuid.django_fields import ShortUUIDField
 from django.utils.html import mark_safe
 from userauths.models import User
@@ -71,7 +74,7 @@ class Vendor(models.Model):
     def __str__(self):
         return self.title
     
-
+#
 
 class Product(models.Model):
     pid = ShortUUIDField(unique=True, length=10, max_length=20, prefix="ven", alphabet="abcde12345")
